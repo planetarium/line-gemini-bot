@@ -15,10 +15,6 @@
     "GOOGLE_API_KEY": {
       "description": "Google AI API Key",
       "required": true
-    },
-    "REDIS_URL": {
-      "description": "Redis URL for caching (optional)",
-      "required": false
     }
   },
   "addons": [
