@@ -2,7 +2,7 @@
 
 A Flask-based LINE Bot that integrates with Google's Gemini AI to create an intelligent chatbot. This bot can handle text messages and images, maintaining conversation context and supporting multiple languages.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy?template=https://github.com/planetarium/line-gemini-bot)
 
 ## Features
 

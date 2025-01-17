@@ -24,7 +24,8 @@
   "addons": [
     {
       "plan": "heroku-redis:hobby-dev",
-      "as": "REDIS"
+      "as": "REDIS",
+      "required": false
     }
   ],
   "buildpacks": [
