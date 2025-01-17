@@ -1,0 +1,32 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+# LINE Bot Configuration
+LINE_CHANNEL_ACCESS_TOKEN = os.getenv('LINE_CHANNEL_ACCESS_TOKEN')
+LINE_CHANNEL_SECRET = os.getenv('LINE_CHANNEL_SECRET')
+
+# Google AI Configuration
+GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
+
+# Redis Configuration
+REDIS_URL = os.getenv('REDIS_URL')
+
+# File size limits (in bytes)
+MAX_FILE_SIZE = 10 * 1024 * 1024  # 10MB
+
+# Message templates
+FIXED_MESSAGES = {
+    'en': {
+        'follow': "Hello {user_name}! I'm your AI assistant. How can I help you today?",
+        'unblock': "Welcome back, {user_name}! How can I assist you today?"
+    },
+    'ja': {
+        'follow': "{user_name}さん、こんにちは！AIアシスタントです。今日はどのようにお手伝いできますか？",
+        'unblock': "{user_name}さん、お帰りなさい！どのようにお手伝いできますか？"
+    }
+} 
+
+# Model configuration
+MODEL_NAME = "gemini-1.5-flash"

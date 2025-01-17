@@ -1,0 +1,38 @@
+{
+  "name": "LINE Gemini Bot",
+  "description": "A LINE bot powered by Google's Gemini AI",
+  "repository": "https://github.com/yourusername/line-gemini-bot",
+  "keywords": ["python", "line-bot", "gemini-ai", "flask"],
+  "env": {
+    "LINE_CHANNEL_ACCESS_TOKEN": {
+      "description": "LINE Channel Access Token from LINE Developers Console",
+      "required": true
+    },
+    "LINE_CHANNEL_SECRET": {
+      "description": "LINE Channel Secret from LINE Developers Console",
+      "required": true
+    },
+    "GOOGLE_API_KEY": {
+      "description": "Google AI API Key",
+      "required": true
+    },
+    "REDIS_URL": {
+      "description": "Redis URL for caching (optional)",
+      "required": false
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-redis:hobby-dev",
+      "as": "REDIS"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "scripts": {
+    "postdeploy": "./copy-example-files.sh"
+  }
+}
